@@ -1,0 +1,58 @@
+
+
+
+<div class="parent-wrapper">
+  <img alt="Client Logo" class="backwrapper" title="Client Logo" src="../assets/image/emerging_tech.png" />
+  <div class="background-glass"></div>
+
+  <!-- Background ref : https://codepen.io/chris22smith/pen/RZogMa -->
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+  <div class="list-wrapper">
+    <div class="logo">
+      Brhm Inc.
+  
+    </div>
+    <div (click)="showComponent(1)"  [ngClass]="{'selected': trigger === 'elem1'}" >BLOG</div>
+    <div (click)="showComponent(2)"  [ngClass]="{'selected': trigger === 'elem2'}" >ABOUT</div>
+    <div (click)="showComponent(3)"  [ngClass]="{'selected': trigger === 'elem3'}" >PROJECTS</div>
+    <!-- <div (click)="showComponent(4)"  [ngClass]="{'selected': trigger === 'elem4'}" >HIRE US</div> -->
+    <div (click)="showComponent(5)"  [ngClass]="{'selected': trigger === 'elem5'}" >CONTACT</div>
+    <!-- <div (click)="showComponent(6)"  [ngClass]="{'selected': trigger === 'elem6'}" >SERVICE BUNDLES</div> -->
+  </div>
+
+  <div class="blog-wrapper">
+    <div *ngIf="hideTimeline === false" class="timeline-wrapper">
+
+      <div class="title t-align">
+        2021
+      </div>
+        <div class="sub-title">
+        May
+        </div>
+
+
+    </div>
+    <div class="content-wrapper">
+
+      <app-blog *ngIf="trigger === 'elem1'"></app-blog>
+      <app-about *ngIf="trigger === 'elem2'"></app-about>
+      <app-portfolio *ngIf="trigger === 'elem3'"></app-portfolio>
+      <app-hireus *ngIf="trigger === 'elem4'"></app-hireus>
+      <app-contact *ngIf="trigger === 'elem5'"></app-contact>
+      <app-product *ngIf="trigger === 'elem6'"></app-product>
+    
+    </div>
+    
+  <div class="footer">
+    © 2021 All Rights Reserved
+  </div>
+  </div>
+
+
+</div>
+
+
+<router-outlet></router-outlet>
