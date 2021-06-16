@@ -12,29 +12,34 @@
 
   <div class="list-wrapper">
     <div class="logo">
-      Brhm Inc.
+      Naffal R&D
+
+      <!-- niyax.com | niyaj.com | gumpchee.com | wavesmasher.com| naffal.com (Naff all - Fuck of or nothing : ref...https://en.wikipedia.org/wiki/Glossary_of_British_terms_not_widely_used_in_the_United_States) -->
   
     </div>
-    <div (click)="showComponent(1)"  [ngClass]="{'selected': trigger === 'elem1'}" >BLOG</div>
-    <div (click)="showComponent(2)"  [ngClass]="{'selected': trigger === 'elem2'}" >ABOUT</div>
-    <div (click)="showComponent(3)"  [ngClass]="{'selected': trigger === 'elem3'}" >PROJECTS</div>
+    <!-- icons reference https://jossef.github.io/material-design-icons-iconfont/ -->
+    <div (click)="showComponent(1)" class="icon-text"  [ngClass]="{'selected': trigger === 'elem1'}" >
+     
+       <mat-icon aria-hidden="false" aria-label="Blog">my_library_books</mat-icon>
+       <span>BLOG</span></div>
+    <div (click)="showComponent(7)" class="icon-text"  [ngClass]="{'selected': trigger === 'elem7'}" >
+      <mat-icon aria-hidden="false" aria-label="Blog">miscellaneous_services</mat-icon>
+      <span> SERVICES</span></div>
+    <div (click)="showComponent(2)" class="icon-text"  [ngClass]="{'selected': trigger === 'elem2'}" >
+      <mat-icon aria-hidden="false" aria-label="Blog">info</mat-icon>
+      <span>  ABOUT</span></div>
+    <div (click)="showComponent(3)" class="icon-text"  [ngClass]="{'selected': trigger === 'elem3'}" >
+      <mat-icon aria-hidden="false" aria-label="Blog">anchor</mat-icon>
+      <span>  PRODUCTS</span></div>
     <!-- <div (click)="showComponent(4)"  [ngClass]="{'selected': trigger === 'elem4'}" >HIRE US</div> -->
-    <div (click)="showComponent(5)"  [ngClass]="{'selected': trigger === 'elem5'}" >CONTACT</div>
+    <div (click)="showComponent(5)" class="icon-text"  [ngClass]="{'selected': trigger === 'elem5'}" >
+      <mat-icon aria-hidden="false" aria-label="Blog">contact_mail</mat-icon>
+      <span>CONTACT</span> </div>
     <!-- <div (click)="showComponent(6)"  [ngClass]="{'selected': trigger === 'elem6'}" >SERVICE BUNDLES</div> -->
   </div>
 
   <div class="blog-wrapper">
-    <div *ngIf="hideTimeline === false" class="timeline-wrapper">
-
-      <div class="title t-align">
-        2021
-      </div>
-        <div class="sub-title">
-        May
-        </div>
-
-
-    </div>
+   
     <div class="content-wrapper">
 
       <app-blog *ngIf="trigger === 'elem1'"></app-blog>

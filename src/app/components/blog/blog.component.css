@@ -5,5 +5,11 @@
     left: 0;
     width: 100%;
     background-color: #ececec;
-
+}
+.article-header{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.article-content{
+    margin-top: 30px;
 }
