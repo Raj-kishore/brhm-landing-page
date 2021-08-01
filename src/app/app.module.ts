@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlogComponent } from './components/blog/blog.component';
@@ -54,6 +53,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './gstock.reducer';
+import { AppRoutingModule } from './app-routing.module';
+import { Blog1Component } from './components/blog1/blog1.component';
 
 @NgModule({
   declarations: [
@@ -63,12 +66,15 @@ import { MatTableModule } from '@angular/material/table';
     PortfolioComponent,
     HireusComponent,
     ContactComponent,
-    ProductComponent
+    ProductComponent,
+    Blog1Component
   ],
   imports: [
-    RouterModule.forRoot([]),
-    BrowserModule,
+    AppRoutingModule ,
+    BrowserModule, 
+    StoreModule.forRoot({ count: counterReducer }),
     CommonModule,
+    BrowserAnimationsModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-about',
@@ -10,6 +11,10 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+       $(".about").animate({
+         "top":"0%",
+         "opacity":"1"
+       });
   }
 
 }

@@ -1,0 +1,12 @@
+.content-wrapper{
+    height: 94%;
+    top: 0%;
+    /* background: rgb(255 255 255 / 40%); */
+    left: 0%;
+    border: solid thin #ececec;
+    right: 0%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 16px;
+    text-align: left;
+}

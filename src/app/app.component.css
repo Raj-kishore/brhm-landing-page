@@ -2,11 +2,15 @@
     margin: 10px 30px;
     cursor: pointer;
 }
+
 .t-align{
     margin: 10px; 
     font-size: 20px;
 }
-
+.blur{
+  opacity: 0.5;
+  cursor: no-drop;
+}
 .bg {
     animation:slide 12s ease-in-out infinite alternate;
     background-image: linear-gradient(-60deg, rgba(102, 204, 51, 0.5) 50%, rgba(0, 153, 255, 0.363) 50%);
@@ -18,6 +22,20 @@
     top:0;
     z-index:-1;
   }
+  .close-style{
+    position: absolute;
+    font-weight: 700;
+    top: 15px;
+    right: 8px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .menustyle{
+    z-index:100;
+    top:10px;
+    left: 10px;
+    background-color: #1B1918!important;
+  }
   
   .bg2 {
     animation-direction:alternate-reverse;
@@ -27,6 +45,7 @@
   .bg3 {
     animation-duration:20s;
   }
+
   @keyframes slide {
     0% {
       transform:translateX(-25%);

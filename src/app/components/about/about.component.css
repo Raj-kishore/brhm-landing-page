@@ -2,17 +2,32 @@
     position: relative;
 
 }
-
+.svg-logo-about{
+    width: 250px;
+}
+.about{
+    margin: 3%;
+    position: absolute;
+    top: 3%;
+    opacity:0.1;
+    overflow-y: scroll;
+    
+    bottom: 0;
+}
 .details >div> p{
-    margin-left:10px;
+    /* margin-left:10px; */
     margin-bottom:10px;
-    border-left: solid thin #3498db;
-    padding-left: 10px;
+    /* border-left: solid thin #3498db; */
+    /* padding-left: 10px; */
 }
 .profileabout{
     display: inline-block;
     width: 50%;
     vertical-align: top;
+}
+.profile-wrapper{
+    width: 50%;
+    float: left;
 }
 .profilepic{
     display: inline-block;
